@@ -53,6 +53,7 @@ main {
   margin-left: 15%;
   padding-top: 60px;
   box-sizing: border-box;
+  padding-left: 24px;
 }
 
 h1 {
@@ -71,6 +72,8 @@ article {
   width: 300px;
   padding: 16px;
   box-sizing: border-box;
+  scroll-margin-top: 70px;
+
 }
 
 #thanks {
