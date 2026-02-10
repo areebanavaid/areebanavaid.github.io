@@ -1,30 +1,141 @@
-html, body {
+html, body{
   margin: 0;
 }
 
-body {
-  min-height: 100vh;
+body{
   display: flex;
   align-items: stretch;
+  min-height: 100vh;
+  background: white;
+  font-family: Arial, sans-serif;
 }
 
 main{
   flex: 1;
 }
 
-article > p:first-of-type::first-letter  {
+
+#menuItems{
+  width: 220px;
+  flex: 0 0 220px;      
+  background: black;
+  padding: 16px;
+  box-sizing: border-box;
+
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+#menuItems > a{
+  display: block;
+  width: 100%;
+  background: #0000ff;
+  color: white;
+  text-decoration: none;
+  padding: 14px 10px;
+  text-align: center;
+  border-bottom: 2px solid black;
+  box-sizing: border-box;
+}
+
+#menuItems > a:hover{
+  background: #1e90ff;
+}
+
+#jumpMenu{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  background: #e2d518;
+
+  max-height: 0;        
+  overflow: hidden;
+  transition: max-height 2s;
+}
+
+#recentArticles:hover ~ #jumpMenu,
+#jumpMenu:hover{
+  max-height: 600px;    
+}
+
+#jumpMenu li{
+  margin: 0;
+}
+
+#jumpMenu a{
+  display: block;
+  width: 100%;
+  padding: 4px 0;
+  background: transparent;   
+  color: #0000ff;
+  text-decoration: none;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+#jumpMenu a:hover{
+  background: #0000ff;
+  color: white;
+}
+
+
+header p{
+  margin: 0;
+  padding: 15px 0;
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
+  color: black;
+  background: red;
+}
+
+h1{
+  text-align: center;
+  font-family: "Times New Roman", Times, serif;
+}
+
+
+#container{
+  display: grid;
+  grid-template-columns: repeat(4, 300px);
+  gap: 30px;
+  justify-content: center;
+  align-items: start;
+}
+
+
+#container article{
+  color: rgba(0,0,0,0.55);
+  max-height: 180px;
+  overflow: hidden;
+  padding: 16px;
+  margin: 12px 0;
+  border: 1px solid rgba(0,0,0,0.12);
+  border-radius: 8px;
+  transition: color 2s, max-height 2s;
+}
+
+#container article:hover{
+  color: rgba(0,0,0,0.9);
+  max-height: 1200px;
+}
+
+
+article > p:first-of-type::first-letter{
   font-family: "Times New Roman", Times, serif;
   font-size: 36px;
   line-height: 1;
 }
 
-article a[href*="google"] {
+article a[href*="google"]{
   position: relative;
   padding-right: 22px;
   text-decoration: none;
 }
 
-article a[href*="google"]::after {
+article a[href*="google"]::after{
   content: "↗";
   display: inline-flex;
   align-items: center;
@@ -38,118 +149,16 @@ article a[href*="google"]::after {
   border-radius: 2px;
 }
 
-#container article {
-  color: rgba(0, 0, 0, 0.55);
-  max-height: 180px;
-  overflow: hidden;
-  padding: 16px;
-  margin: 12px 0;
-  border: 1px solid rgba(0,0,0,0.12);
-  border-radius: 8px;
-  transition: color 2s, max-height 2s;
-}
 
-#container article:hover {
-  color: rgba(0, 0, 0, 0.9);
-  max-height: 1200px;
-}
-
-/* Header bar */
-header p {
-  margin: 0;
-  padding: 15px 0;
-  font-size: 30px;
-  font-weight: bold;
-  text-align: center;
-  color: black;
-  background-color: red;
-}
-
-#container {
-  display: grid;
-  grid-template-columns: repeat(4, 300px);
-  gap: 30px;
-  justify-content: center;
-  align-items: start;
-}
-
-#menuItems{
-  background: black;
-  align-self: stretch;   /* important */
-  height: auto;          /* default, but explicit is fine */
-  min-height: 100vh;     /* still covers the screen */
-  width: 200px;
-}
-
-
-#menuItems button {
-  width: 100%;
-  display: block;
-  background: #0000ff;
-  color: white;
-  border: none;
-  padding: 14px 10px;
-  text-align: center;
-  cursor: pointer;
-  border-bottom: 2px solid black;
-}
-
-#menuItems button:hover {
-  background: #1e90ff;
-}
-
-h1 {
-  text-align: center;
-  font-family: 'Times New Roman', Times, serif;
-}
-
-#jumpMenu{
-  list-style: none;
-  margin: 0;
-  padding: 0;
-
-  width: 100%;
-  background: #e2d518;
-
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 2s;
-}
-
-#recentArticles:hover ~ #jumpMenu,
-#jumpMenu:hover{
-  max-height: 600px;
-}
-
-#jumpMenu a{
-  display: block;
-  width: 100%;
-  padding: 4px 0;          /* list spacing */
-  background: transparent; /* single yellow strip shows through */
-  color: #0000ff;
-  text-decoration: none;
-  text-align: center;
-}
-
-#jumpMenu li {
-  margin: 0;
-}
-
-#jumpMenu a:hover{
-  background: #0000ff;
-  color: white;
-}
-
-#thanks {
+#thanks{
   position: fixed;
   bottom: 0;
   right: 0;
   padding: 16px;
   margin: 16px;
-  background-color: rgba(44, 213, 243, 0.75);
+  background: rgba(44, 213, 243, 0.75);
 }
 
-footer {
-  margin-top: auto;
+footer{
   text-align: center;
 }
