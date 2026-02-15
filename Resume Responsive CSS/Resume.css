@@ -1,0 +1,76 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  max-width: 850px;
+  margin: 40px auto;
+  padding: 0 20px;
+  line-height: 1.4;
+  color: #111;
+}
+
+/* Header */
+h1 {
+  text-align: center;
+  margin-bottom: 6px;
+}
+
+h1 + p {
+  text-align: center;
+  margin-top: 0;
+  font-size: 14px;
+}
+
+a {
+  color: #0056cc;
+  text-decoration: none;
+}
+
+h1 + p + p {
+  text-align: center;
+}
+
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Section titles */
+h2 {
+  margin-top: 28px;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 4px;
+  font-size: 16px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Jobs */
+.job {
+  margin-top: 16px;
+}
+
+.job-header {
+  display: flex;
+  justify-content: space-between;
+  font-weight: bold;
+}
+
+.job-title {
+  font-style: italic;
+  margin-bottom: 6px;
+}
+
+/* Lists */
+ul {
+  margin-top: 6px;
+  padding-left: 20px;
+}
+
+li {
+  margin-bottom: 6px;
+}
+
+.edu-row {
+  display: flex;
+  justify-content: space-between;
+  font-weight: bold;
+}
