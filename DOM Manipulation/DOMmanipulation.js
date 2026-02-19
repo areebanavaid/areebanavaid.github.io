@@ -6,6 +6,10 @@ window.onload = function () {
     document.getElementById("filterContent").style.display = "none";
 };
 
+window.onload = function () {
+    document.getElementById("filterContent").style.display = "none";
+    document.getElementById("newContent").style.display = "none";
+};
 
 function showFilter() {
     let filterContent = document.getElementById("filterContent");
@@ -90,4 +94,5 @@ function addNewArticle() {
 
   filterArticles();
 }
+
 
