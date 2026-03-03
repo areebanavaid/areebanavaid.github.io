@@ -1,0 +1,110 @@
+body {
+  margin: 0;
+  min-height: 100vh;
+  background-color: rgb(120, 235, 255);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#card {
+    background: white;
+
+    border: 6px solid #f3b400;
+    border-radius: 35px;
+
+    width: 650px;
+    min-height: 750px;
+    padding: 24px 28px;
+
+    text-align: center;
+
+    box-sizing: border-box;
+}
+
+#searchArea {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+}
+
+#searchArea label {
+    font-size: 18px;        
+    font-weight: 600;
+}
+
+#searchRow {
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+}
+    
+
+#pokemonInput {
+  width: 230px;
+}
+
+#mediaArea {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#pokemonImg {
+  width: 220px;
+  height: 220px;        
+  object-fit: contain; 
+  margin: 24px auto 12px;
+}
+
+#movesArea {
+    margin-top: 24px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;  /* 2x2 layout */
+    gap: 12px 24px;
+    justify-items: center;
+
+}
+
+#movesArea select {
+    width: 220px;
+}
+
+#addToTeamBtn {
+    margin-top: 24px;
+}
+
+
+#findBtn {
+  padding: 4px 10px;
+}
+
+#teamTable {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+#teamTable tr {
+  border-top: 2px solid black;
+}
+
+#teamTable td {
+  padding: 12px;
+  vertical-align: middle;
+}
+
+#pokemonImg {
+  display: none;
+  width: 220px;
+  height: 220px;
+  object-fit: contain;
+  margin: 24px auto 12px;
+}
+
+#teamTable ul {
+  margin: 0;
+}
